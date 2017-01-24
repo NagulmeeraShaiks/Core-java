@@ -1,0 +1,30 @@
+Variable in program need to perform 2 steps
+
+1.Variable Declaration
+2.Variable Initialization
+1) Variable Declaration:
+To declare a variable , you must specify the data type & give the variable a unique name.
+2) Variable Initialization:
+To initialize a variable you must assign it a valid value.
+
+1. What is Inline function?
+
+Inline function is a technique used by the compilers and instructs to insert complete body of the function
+ wherever that function is used in the program source code.
+ 
+2. What isfriend function?
+
+Friend function is a friend of a class that is allowed to access to Public, private or protected data in that same class. If the function is defined outside the class cannot access such information.
+
+Friend can be declared anywhere in the class declaration, and it cannot be affected by access control keywords like private, public or protected.
+
+3 What isfriend function?
+
+Friend function is a friend of a class that is allowed to access to Public, private or protected data in that same class. If the function is defined outside the class cannot access such information.
+
+Friend can be declared anywhere in the class declaration, and it cannot be affected by access control keywords like private, public or protected.
+
+4. What is an abstract class?
+
+An abstract class is a class which cannot be instantiated. Creation of an object is not possible with abstract class , but it can be inherited. An abstract class can contain only Abstract method. Java allows only abstract method in abstract class while for other language it allows non-abstract method as well.
+S 

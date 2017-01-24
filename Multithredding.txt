@@ -1,0 +1,120 @@
+Multithreading in Java
+@@@@@@@@@@@@@@@@@@@@@@@
+Any application can have multiple process (instances).
+ Each of this process can be assigned either as a single thread or multiple threads.
+
+Single Thread: A single thread is basically a lightweight and the smallest unit of processing.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+package demotest;
+
+public class GuruThread1 implements Runnable
+{
+    public static void main(String[] args) {
+        Thread guruThread1 = new Thread("Guru1");
+        Thread guruThread2 = new Thread("Guru2");
+        guruThread1.start();
+        guruThread2.start();
+        System.out.println("Thread names are following:");
+        System.out.println(guruThread1.getName());
+        System.out.println(guruThread2.getName());
+    }
+    @Override
+    public void run() {
+    }
+
+}
+
+Multi-Thread: While multithreading can be defined as the execution of two or more threads concurrently.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+package demotest;
+public class GuruMultithread implements Runnable{
+
+    public static void main(String[] args) {
+             Thread guruthread1 = new Thread();
+             guruthread1.start();
+             Thread guruthread2 = new Thread();
+             guruthread2.start();
+    }
+
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        
+    }
+
+}
+
+Advantages of single thread:
+
+Reduces overhead in the application as single thread execute in the system
+Also, it reduces the maintenance cost of the application.
+Multithreads
+
+Multithreaded applications are where two or more threads run concurrently. 
+This multitasking is done, when multiple process shares common resources like CPU, memory, etc.
+
+Each thread runs parallel to each other.
+ Threads don't allocate separate memory area, hence it saves memory. 
+Also, context switching between threads takes less time.
+
+
+Advantages of multithread:
+
+The users are not blocked because threads are independent, and we can perform multiple operations at times
+As such the threads are independent, the other threads won't get affected if one thread meets an exception.
+
+
+Thread life cycle in java
+@@@@@@@@@@@@@@@@@@@@@@@@@
+
+NewThread--Runnable--Running--waiting--dead
+
+
+New: In this phase, the thread is created using class "Thread class".It remains in this state till the program starts the thread. It is also known as born thread.
+Runnable: In this page, the instance of the thread is invoked with a start method. The thread control is given to scheduler to finish the execution. It depends on the scheduler, whether to run the thread.
+Running: When the thread starts executing then the state is changed to "running" state. The scheduler selects one thread from the thread pool, and it starts executing in the application.
+Waiting: This is the state when a thread has to wait. As there are multiple threads running in the application, there is a need for synchronization between threads. Hence, one thread has to wait, till the other thread get executed. Therefore, this state is referred as waiting state.
+Dead: This is the state when the thread is terminated. The thread is in running state and as soon as it completed processing it is in "dead state".
+Some of commonly used methods for threads are:
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+start()
+This method starts the execution of the thread and JVM calls the run() method on the thread.
+
+
+
+Sleep(int milliseconds)
+This method makes the thread sleep hence the thread's execution will pause for milliseconds provided and after that, again the thread starts executing. This help in synchronization of the threads.
+
+getName():
+It returns the name of the thread.
+
+setPriority(int newpriority)
+It changes the priority of the thread.
+
+yield ()
+It causes current thread on halt and other threads to execute.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Java Thread Synchronization
+-----------------------------
+In multithreading, there is the asynchronous behavior of the programs.
+ If one thread is writing some data and another thread which is reading data at the same time,
+ might create inconsistency in the application.
+
+When there is a need to access the shared resources by two or more threads, then synchronization approach is utilized.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Summary:
+
+In this tutorial, we saw multithreaded applications in Java and how to use single and multithreads.
+
+In multithreading, users are not blocked as threads are independent and can perform multiple operations at time
+Various stages in life cycle of the thread are,
+New
+Runnable
+Running
+Waiting
+Dead
+We also learnt about synchronization between threads, which help the application to run smoothly.
+Multithreading makes many more application tasks easier
